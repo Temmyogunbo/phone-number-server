@@ -1,0 +1,49 @@
+{
+  "name": "phone-number-server",
+  "version": "1.0.0",
+  "description": "File server for phone numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test lab",
+    "start:dev": "cross-env NODE_ENV=development babel-node --inspector -- src/server.js",
+    "build": "rm -rf src/dist && babel src/ --out-dir src/dist/ --copy-files",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Temmyogunbo/phone-number-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Temmyogunbo/phone-number-server/issues"
+  },
+  "homepage": "https://github.com/Temmyogunbo/phone-number-server#readme",
+  "dependencies": {
+    "boom": "^7.2.2",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.1.0",
+    "glue": "^5.0.0",
+    "hapi": "^17.7.0",
+    "hapi-bodyparser": "^2.0.2",
+    "hapi-pino": "^5.1.0",
+    "joi": "^14.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.2.0",
+    "code": "^5.2.3",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "lab": "^17.3.0",
+    "lab-babel": "^1.1.1",
+    "sinon": "^7.1.1"
+  }
+}

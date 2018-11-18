@@ -1,0 +1,7 @@
+node_modules/
+yarn-error.log
+.env
+src/dist
+src/dist/index.js
+coverage
+.DS_Store
